@@ -32,10 +32,10 @@ const IndexPage = () => (
         <IonCardTitle>Welcome to Ionic</IonCardTitle>
       </IonCardHeader>
       <IonCardContent>
-        <p>
+        <div>
           Now that your app has been created, you'll want to start building out features and
           components. Check out some of the resources below for next steps.
-        </p>
+        </div>
       </IonCardContent>
     </IonCard>
 

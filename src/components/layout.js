@@ -31,7 +31,6 @@ import '@ionic/react/css/display.css'
 
 /* Theme variables */
 import '../theme/variables.css';
-import { Route, Redirect } from "react-router-dom";
 import Menu from "./Menu";
 
 const Layout = ({ children }) => {
@@ -44,26 +43,6 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
-  const tabPage = (title) => {
-    return (
-      <IonTab tab={title}>
-        <IonHeader translucent>
-          <IonToolbar>
-            <IonTitle>{title}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent fullscreen>
-          <h1>{title}</h1>
-        </IonContent>
-      </IonTab>
-    );
-  }
-
-  const getPage = (title) => <IonPage>{title}</IonPage>;
-
-  let Home = () => <div>Home</div>
-  let Dash = () => <div>Dash</div>
 
   return (
     <IonApp>

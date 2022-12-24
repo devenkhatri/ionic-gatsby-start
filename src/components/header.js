@@ -9,8 +9,8 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </IonTitle>
       <IonButtons slot="start">
-              <IonMenuButton></IonMenuButton>
-            </IonButtons>
+        <IonMenuButton></IonMenuButton>
+      </IonButtons>
     </IonToolbar>
   </IonHeader>
 )

@@ -64,14 +64,15 @@ const appPages: AppPage[] = [
 const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
 const Menu: React.FC = () => {
-  const location = useLocation();
+  const isBrowser = typeof window !== "undefined"
+  const location = isBrowser?useLocation():{pathname:""};
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
           <IonListHeader>Inbox</IonListHeader>
           <IonNote>hi@ionicframework.com</IonNote>
-          {appPages.map((appPage, index) => {
+          {isBrowser && appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
                 <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>

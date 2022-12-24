@@ -20,7 +20,8 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './src/theme/variables.css';
 
-setupIonicReact();
+const isBrowser = typeof window !== "undefined"
+if(isBrowser) setupIonicReact();
 
 // export const wrapRootElement = ({ element }) => {
 //   return (
