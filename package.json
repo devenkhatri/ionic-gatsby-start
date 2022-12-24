@@ -2,6 +2,8 @@
   "name": "ionic-gatsby-starter",
   "version": "0.0.1",
   "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby and Ionic. This barebones starter ships with the main Gatsby configuration and Ionic files you might need.",
+  "author": "Deven Goratela <deven.khatri@gmail.com>",
   "dependencies": {
     "@capacitor/app": "4.1.1",
     "@capacitor/core": "4.6.1",
@@ -20,10 +22,19 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "gatsby": "^5.3.3",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-manifest": "^5.3.1",
+    "gatsby-plugin-offline": "^6.3.1",
+    "gatsby-plugin-react-helmet": "^6.3.0",
+    "gatsby-plugin-sharp": "^5.3.2",
+    "gatsby-source-filesystem": "^5.3.1",
+    "gatsby-transformer-sharp": "^5.3.1",
     "history": "^4.9.0",
     "ionicons": "^6.0.3",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.0",
@@ -43,11 +54,19 @@
     "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "build": "gatsby build",
     "develop": "gatsby develop",
-    "build": "react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionic/react-router|@ionic/core|@stencil/core|ionicons)/)'",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
     "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devenkhatri/ionic-gatsby-starter"
   },
   "eslintConfig": {
     "extends": [
@@ -69,6 +88,5 @@
   },
   "devDependencies": {
     "@capacitor/cli": "4.6.1"
-  },
-  "description": "An Ionic project"
+  }
 }

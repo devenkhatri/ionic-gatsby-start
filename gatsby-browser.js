@@ -1,8 +1,4 @@
-import { IonApp, IonRouterOutlet, IonSplitPane, setupIonicReact } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { Redirect, Route } from 'react-router-dom';
-import Menu from './src/components/Menu';
-import Page from './src/pages/Page';
+import { setupIonicReact } from '@ionic/react';
 import React from 'react';
 
 /* Core CSS required for Ionic components to work properly */
@@ -26,22 +22,22 @@ import './src/theme/variables.css';
 
 setupIonicReact();
 
-export const wrapRootElement = ({ element }) => {
-  return (
-    <IonApp>
-      <IonReactRouter>
-        <IonSplitPane contentId="main">
-          <Menu />
-          <IonRouterOutlet id="main">
-            <Route path="/" exact={true}>
-              <Redirect to="/page/Inbox" />
-            </Route>
-            <Route path="/page/:name" exact={true}>
-              <Page />
-            </Route>
-          </IonRouterOutlet>
-        </IonSplitPane>
-      </IonReactRouter>
-    </IonApp>
-  )
-}
+// export const wrapRootElement = ({ element }) => {
+//   return (
+//     <IonApp>
+//       <IonReactRouter>
+//         <IonSplitPane contentId="main">
+//           <Menu />
+//           <IonRouterOutlet id="main">
+//             <Route path="/" exact={true}>
+//               <SecondPage />
+//             </Route>
+//             <Route path="/page/:name" exact={true}>
+//               <Page />
+//             </Route>
+//           </IonRouterOutlet>
+//         </IonSplitPane>
+//       </IonReactRouter>
+//     </IonApp>
+//   )
+// }
